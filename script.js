@@ -74,7 +74,7 @@ const cars = [
         {
     name: "Insani Regency Lamongan",
     images: [
-      "assets/mobil/10.jpg",
+      "assets/mobil/10.JPG",
       "assets/mobil/11.jpg",
       "assets/mobil/12.jpg"
     ],
