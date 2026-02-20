@@ -1,0 +1,200 @@
+// Smooth scroll
+function scrollToId(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Toggle menu mobile
+const navToggle = document.getElementById("navToggle");
+const navMobile = document.getElementById("navMobile");
+
+if (navToggle && navMobile) {
+  navToggle.addEventListener("click", function () {
+    navMobile.classList.toggle("show");
+  });
+}
+
+// ✅ Tutup menu saat tombol navigasi diklik (khusus navMobile)
+document.querySelectorAll('#navMobile button').forEach(btn => {
+  btn.addEventListener('click', function () {
+    navMobile.classList.remove('show');
+  });
+});
+
+// Booking form -> WhatsApp
+const bookingForm = document.getElementById('bookingForm');
+if (bookingForm) {
+  bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(bookingForm);
+    const data = Object.fromEntries(fd.entries());
+    const message = `*Assallamuallaikum, Marketing Perumahan Insani Land, saya ingin mengecek ketersediaan Rumah:*%0A%0A*Nama:* ${data.name}%0A*Alamat Lengkap:* ${data.destination}%0A*Pilihan Rumah:* ${data.carType}%0A%0ATerima kasih!`;
+    const wa = `https://wa.me/6289644300777?text=${message}`;
+    window.open(wa, '_blank');
+  });
+}
+
+
+// Data mobil 
+const cars = [
+  {
+    name: "Perumahan Insani Land",
+    images: [
+      "assets/mobil/innova1.jpg",
+      "assets/mobil/innova2.jpg",
+      "assets/mobil/innova3.jpg"
+    ],
+    priceDaily: "-",
+    priceWeekly: "FREE DP",
+    priceMonthly: "-",
+    
+  },
+    {
+    name: "Perumahan Insani Land 2",
+    images: [
+      "assets/mobil/allbrio1.jpg",
+      "assets/mobil/allbrio2.jpg",
+      "assets/mobil/allbrio3.jpg"
+    ],
+    priceDaily: "Rp166 Jutaan",
+    priceWeekly: "-",
+    priceMonthly: "FLAT Sampai Lunas",
+  },
+      {
+    name: "Perumahan Insani Land 3",
+    images: [
+      "assets/mobil/allbrv1.jpg",
+      "assets/mobil/allbrv2.jpg",
+      "assets/mobil/allbrv3.jpg"
+    ],
+    priceDaily: "Hub.WA",
+    priceWeekly: "FREE DP",
+    priceMonthly: "Hanya Setor KTP",
+  },
+        {
+    name: "Perumahan Insani Land 4",
+    images: [
+      "assets/mobil/jazz1.jpg",
+      "assets/mobil/jazz2.jpg",
+      "assets/mobil/jazz3.jpg"
+    ],
+    priceDaily: "Rp160 Jutaan",
+    priceWeekly: "Hub.wa",
+    priceMonthly: "-",
+  },
+        {
+    name: "Perumahan Insani Land 5",
+    images: [
+      "assets/mobil/hills1.jpg",
+      "assets/mobil/hills2.jpg",
+      "assets/mobil/hills3.jpg"
+    ],
+    priceDaily: "Rp160 Jutaan",
+    priceWeekly: "_",
+    priceMonthly: "cerme,Gresik",
+  },
+
+];
+
+// Render katalog
+const grid = document.getElementById("catalogGrid");
+if (grid) {
+  grid.innerHTML = cars.map((car, i) => `
+    <div class="catalog-card">
+      <div class="swiper car-swiper-${i}">
+        <div class="swiper-wrapper">
+          ${car.images.map(img => `<div class="swiper-slide"><img src="${img}" alt="${car.name}"></div>`).join("")}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="body">
+        <h3>${car.name}</h3>
+        <div class="price-row"><span>Harga</span><span class="price">${car.priceDaily}</span></div>
+        <div class="price-row"><span>DP</span><span class="price">${car.priceWeekly}</span></div>
+        <div class="price-row"><span>Lain2</span><span class="price">${car.priceMonthly}</span></div>
+        <div class="card-actions"><button class="btn btn-primary btn-lg" onclick="selectCar('${car.name}')">Booking Sekarang</button></div>
+      </div>
+    </div>
+  `).join("");
+
+  cars.forEach((_, i) => {
+    new Swiper(`.car-swiper-${i}`, {
+      loop: true,
+      navigation: {
+        nextEl: `.car-swiper-${i} .swiper-button-next`,
+        prevEl: `.car-swiper-${i} .swiper-button-prev`,
+      },
+    });
+  });
+
+  // Tambahkan fungsi selectCar secara global. Fungsi ini akan mengisi select "Pilihan Mobil"
+  // sesuai dengan nama mobil dari kartu yang diklik dan kemudian menggulir ke formulir pemesanan.
+  window.selectCar = function(carName) {
+    const select = document.getElementById('carType');
+    if (select) {
+      // Pastikan opsi mobil ada; jika belum, tambahkan.
+      let optionExists = false;
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value === carName || select.options[i].textContent === carName) {
+          optionExists = true;
+          break;
+        }
+      }
+      if (!optionExists) {
+        const opt = document.createElement('option');
+        opt.value = carName;
+        opt.textContent = carName;
+        select.appendChild(opt);
+      }
+      // Set nilai select ke mobil yang dipilih
+      select.value = carName;
+    }
+    // Scroll ke formulir booking
+    scrollToId('booking');
+  };
+
+  document.getElementById("duration").addEventListener("change", function() {
+    var timeSelect = document.getElementById("time");
+    var durationValue = this.value;
+    
+    // Kosongkan opsi sebelumnya
+    timeSelect.innerHTML = '<option value="">Pilih jumlah sewa</option>';
+    
+    // Tentukan jumlah pilihan berdasarkan lama sewa
+    if (durationValue === "harian") {
+      // Pilihan untuk harian (1-6 hari)
+      for (var i = 1; i <= 6; i++) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.textContent = i + " Hari";
+        timeSelect.appendChild(option);
+      }
+    } else if (durationValue === "mingguan") {
+      // Pilihan untuk mingguan (1-3 minggu)
+      for (var i = 1; i <= 3; i++) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.textContent = i + " Minggu";
+        timeSelect.appendChild(option);
+      }
+    } else if (durationValue === "bulanan") {
+      // Pilihan untuk bulanan (1-6 bulan)
+      for (var i = 1; i <= 6; i++) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.textContent = i + " Bulan";
+        timeSelect.appendChild(option);
+      }
+    }
+  });
+  
+  // Inisialisasi GLightbox setelah halaman termuat
+  const lightbox = GLightbox({
+    touchNavigation: true,   // memungkinkan navigasi sentuh (swipe) di mobile
+    loop: true               // memungkinkan looping ke foto pertama setelah foto terakhir
+  });
+  // Secara default, GLightbox akan otomatis mencari elemen dengan class "glightbox" dan mengaktifkan lightbox pada elemen tersebut.
+
+  
+}
