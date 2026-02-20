@@ -52,9 +52,9 @@ const cars = [
     {
     name: "Insani Regency Pasuruan",
     images: [
-      "assets/mobil/allbrio1.jpg",
-      "assets/mobil/allbrio2.jpg",
-      "assets/mobil/allbrio3.jpg"
+      "assets/mobil/4.jpg",
+      "assets/mobil/5.jpg",
+      "assets/mobil/6.jpg"
     ],
     priceDaily: "-",
     priceWeekly: "-",
