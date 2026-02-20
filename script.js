@@ -53,7 +53,7 @@ const cars = [
     name: "Insani Regency Pasuruan",
     images: [
       "assets/mobil/4.jpg",
-      "assets/mobil/5.jpg",
+      "assets/mobil/5.png",
       "assets/mobil/6.jpg"
     ],
     priceDaily: "-",
