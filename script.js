@@ -38,60 +38,60 @@ if (bookingForm) {
 // Data mobil 
 const cars = [
   {
-    name: "Perumahan Insani Land",
+    name: "Insani Regency Driyorejo",
     images: [
       "assets/mobil/innova1.jpg",
       "assets/mobil/innova2.jpg",
       "assets/mobil/innova3.jpg"
     ],
     priceDaily: "-",
-    priceWeekly: "FREE DP",
+    priceWeekly: "-",
     priceMonthly: "-",
     
   },
     {
-    name: "Perumahan Insani Land 2",
+    name: "Insani Regency Pasuruan",
     images: [
       "assets/mobil/allbrio1.jpg",
       "assets/mobil/allbrio2.jpg",
       "assets/mobil/allbrio3.jpg"
     ],
-    priceDaily: "Rp166 Jutaan",
+    priceDaily: "-",
     priceWeekly: "-",
-    priceMonthly: "FLAT Sampai Lunas",
+    priceMonthly: "-",
   },
       {
-    name: "Perumahan Insani Land 3",
+    name: "Griya Permata Insani",
     images: [
       "assets/mobil/allbrv1.jpg",
       "assets/mobil/allbrv2.jpg",
       "assets/mobil/allbrv3.jpg"
     ],
-    priceDaily: "Hub.WA",
-    priceWeekly: "FREE DP",
-    priceMonthly: "Hanya Setor KTP",
+    priceDaily: "-",
+    priceWeekly: "-",
+    priceMonthly: "-",
   },
         {
-    name: "Perumahan Insani Land 4",
+    name: "Insani Regency Lamongan",
     images: [
       "assets/mobil/jazz1.jpg",
       "assets/mobil/jazz2.jpg",
       "assets/mobil/jazz3.jpg"
     ],
-    priceDaily: "Rp160 Jutaan",
-    priceWeekly: "Hub.wa",
+    priceDaily: "-",
+    priceWeekly: "-",
     priceMonthly: "-",
   },
         {
-    name: "Perumahan Insani Land 5",
+    name: "Rejosari Residence Jombang",
     images: [
       "assets/mobil/hills1.jpg",
       "assets/mobil/hills2.jpg",
       "assets/mobil/hills3.jpg"
     ],
-    priceDaily: "Rp160 Jutaan",
-    priceWeekly: "_",
-    priceMonthly: "cerme,Gresik",
+    priceDaily: "-",
+    priceWeekly: "-",
+    priceMonthly: "-",
   },
 
 ];
