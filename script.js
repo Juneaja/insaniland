@@ -113,7 +113,7 @@ if (grid) {
         <div class="price-row"><span>Harga</span><span class="price">${car.priceDaily}</span></div>
         <div class="price-row"><span>DP</span><span class="price">${car.priceWeekly}</span></div>
         <div class="price-row"><span>Lain2</span><span class="price">${car.priceMonthly}</span></div>
-        <div class="card-actions"><button class="btn btn-primary btn-lg" onclick="selectCar('${car.name}')">Booking Sekarang</button></div>
+        <div class="card-actions"><button class="btn btn-primary btn-lg" onclick="selectCar('${car.name}')">Beli Sekarang</button></div>
       </div>
     </div>
   `).join("");
