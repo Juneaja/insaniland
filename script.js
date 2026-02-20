@@ -40,9 +40,9 @@ const cars = [
   {
     name: "Insani Regency Driyorejo",
     images: [
-      "assets/mobil/innova1.jpg",
-      "assets/mobil/innova2.jpg",
-      "assets/mobil/innova3.jpg"
+      "assets/mobil/1.jpg",
+      "assets/mobil/2.jpg",
+      "assets/mobil/3.jpg"
     ],
     priceDaily: "-",
     priceWeekly: "-",
