@@ -63,9 +63,9 @@ const cars = [
       {
     name: "Griya Permata Insani",
     images: [
-      "assets/mobil/allbrv1.jpg",
-      "assets/mobil/allbrv2.jpg",
-      "assets/mobil/allbrv3.jpg"
+      "assets/mobil/7.jpg",
+      "assets/mobil/8.png",
+      "assets/mobil/9.jpg"
     ],
     priceDaily: "-",
     priceWeekly: "-",
@@ -74,9 +74,9 @@ const cars = [
         {
     name: "Insani Regency Lamongan",
     images: [
-      "assets/mobil/jazz1.jpg",
-      "assets/mobil/jazz2.jpg",
-      "assets/mobil/jazz3.jpg"
+      "assets/mobil/10.jpg",
+      "assets/mobil/11.jpg",
+      "assets/mobil/12.jpg"
     ],
     priceDaily: "-",
     priceWeekly: "-",
