@@ -85,9 +85,9 @@ const cars = [
         {
     name: "Rejosari Residence Jombang",
     images: [
-      "assets/mobil/hills1.jpg",
-      "assets/mobil/hills2.jpg",
-      "assets/mobil/hills3.jpg"
+      "assets/mobil/13.jpg",
+      "assets/mobil/14.jpg",
+      "assets/mobil/15.jpg"
     ],
     priceDaily: "-",
     priceWeekly: "-",
