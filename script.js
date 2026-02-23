@@ -44,9 +44,9 @@ const cars = [
       "assets/mobil/2.jpg",
       "assets/mobil/3.jpg"
     ],
-    priceDaily: "-",
-    priceWeekly: "-",
-    priceMonthly: "-",
+    priceDaily: "166juta",
+    priceWeekly: "2juta",
+    priceMonthly: "Flat",
     
   },
     {
@@ -56,9 +56,9 @@ const cars = [
       "assets/mobil/5.png",
       "assets/mobil/6.jpg"
     ],
-    priceDaily: "-",
-    priceWeekly: "-",
-    priceMonthly: "-",
+    priceDaily: "166juta",
+    priceWeekly: "2juta",
+    priceMonthly: "Flat",
   },
       {
     name: "Griya Permata Insani",
@@ -67,9 +67,9 @@ const cars = [
       "assets/mobil/8.png",
       "assets/mobil/9.jpg"
     ],
-    priceDaily: "-",
-    priceWeekly: "-",
-    priceMonthly: "-",
+    priceDaily: "166juta",
+    priceWeekly: "2juta",
+    priceMonthly: "Flat",
   },
         {
     name: "Insani Regency Lamongan",
@@ -78,9 +78,9 @@ const cars = [
       "assets/mobil/11.jpg",
       "assets/mobil/12.jpg"
     ],
-    priceDaily: "-",
-    priceWeekly: "-",
-    priceMonthly: "-",
+    priceDaily: "166juta",
+    priceWeekly: "2juta",
+    priceMonthly: "Flat",
   },
         {
     name: "Rejosari Residence Jombang",
@@ -89,9 +89,9 @@ const cars = [
       "assets/mobil/14.jpg",
       "assets/mobil/15.jpg"
     ],
-    priceDaily: "-",
-    priceWeekly: "-",
-    priceMonthly: "-",
+    priceDaily: "166juta",
+    priceWeekly: "2juta",
+    priceMonthly: "Flat",
   },
 
 ];
