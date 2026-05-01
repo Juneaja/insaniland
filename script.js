@@ -29,7 +29,7 @@ if (bookingForm) {
     const fd = new FormData(bookingForm);
     const data = Object.fromEntries(fd.entries());
     const message = `*Assallamuallaikum, Marketing Perumahan Insani Land, saya ingin mengecek ketersediaan Rumah:*%0A%0A*Nama:* ${data.name}%0A*Alamat Lengkap:* ${data.destination}%0A*Pilihan Rumah:* ${data.carType}%0A%0ATerima kasih!`;
-    const wa = `https://wa.me/6289644300777?text=${message}`;
+    const wa = `https://wa.me/6281330218608?text=${message}`;
     window.open(wa, '_blank');
   });
 }
